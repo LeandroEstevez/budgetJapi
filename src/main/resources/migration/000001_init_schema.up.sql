@@ -1,7 +1,8 @@
 CREATE TABLE "users" (
   "username" varchar PRIMARY KEY,
   "hashed_password" varchar NOT NULL,
-  "full_name" varchar NOT NULL,
+  "first_name" varchar NOT NULL,
+  "last_name" varchar NOT NULL,
   "email" varchar UNIQUE NOT NULL,
   "total_expenses" NUMERIC(9,2) NOT NULL DEFAULT 0
 );

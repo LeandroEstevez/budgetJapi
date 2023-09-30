@@ -14,9 +14,9 @@ dropdb:
 	docker exec -it postgres dropdb budgetapidb
 
 migrateup:
-	migrate -path db/migration -database "$(DB_URL_local)" -verbose up 1
+	migrate -path src/main/resources/migration -database "$(DB_URL_local)" -verbose up 1
 
 migratedown:
-	migrate -path db/migration -database "$(DB_URL_local)" -verbose down
+	migrate -path src/main/resources/migration -database "$(DB_URL_local)" -verbose down
 
 .PHONY: network newPostgres postgres createdb dropdb migrateup migratedown sqlc server mock
